@@ -18,7 +18,7 @@ def find_sum_pair(in_list):
 number = int(input('Введите колличество элементов списка: '))
 my_list = []
 
-print(f'Ввете элементы списка:')
+print(f'Введите элементы списка:')
 for i in range(number):
     my_list.append(int(input()))
 
