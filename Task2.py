@@ -4,23 +4,29 @@
 # [2, 3, 4, 5, 6] => [12, 15, 16];
 # [2, 3, 5, 6] => [12, 15]
 
-def find_sum_pair(in_list):
-    out_list = []
-    length_in_list = len(in_list)
-    for i in range(int(length_in_list / 2)):
-        out_list.append(in_list[i] * in_list[length_in_list - 1 - i])
+#def find_sum_pair(in_list):
+    #out_list = []
+    #length_in_list = len(in_list)
+    #for i in range(int(length_in_list / 2)):
+        #out_list.append(in_list[i] * in_list[length_in_list - 1 - i])
 
-    if length_in_list % 2 != 0:
-        out_list.append(in_list[int(length_in_list / 2)] ** 2)
+    #if length_in_list % 2 != 0:
+        #out_list.append(in_list[int(length_in_list / 2)] ** 2)
 
-    return out_list
+    #return out_list
 
 number = int(input('Введите колличество элементов списка: '))
 my_list = []
 
 print(f'Введите элементы списка:')
-for i in range(number):
-    my_list.append(int(input()))
+#for i in range(number):
+    #my_list.append(int(input()))
+    
+my_list = [int(input()) for _ in range(number)]
 
 print(my_list)
-print(find_sum_pair(my_list))
+#print(find_sum_pair(my_list))
+
+new = [item*my_list[len(my_list)-i-1] for i, item in enumerate(my_list) if i < len(my_list)/2]
+print(new)
+  
